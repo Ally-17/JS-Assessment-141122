@@ -16,21 +16,36 @@
                 <input type="radio" name="one" id="cat" value="cat" onclick="checkbutton()"/>Cats</input>  
     </form>
         <br>
-        <img src="https://img.freepik.com/premium-vector/funny-yellow-question-mark-cartoon-charactersvector-collection-set_20412-629.jpg?w=2000"
+        <img id= "questionmark" src="https://img.freepik.com/premium-vector/funny-yellow-question-mark-cartoon-charactersvector-collection-set_20412-629.jpg?w=2000"
         width="300"
         height="200"
         display: none/>
 
-        <img src="https://img.freepik.com/premium-vector/cute-dog-cartoon-dog-clipart-vector-illustration_160901-2890.jpg?w=2000"
+        <img id= "dogimg" src="https://img.freepik.com/premium-vector/cute-dog-cartoon-dog-clipart-vector-illustration_160901-2890.jpg?w=2000"
         width="300"
         height="200"
-        display: none/>
+        />
     
-        <img src="https://img.freepik.com/premium-vector/cute-cat-cartoon-sitting_194935-99.jpg?w=2000"
+        <img id= "catimg" src="https://img.freepik.com/premium-vector/cute-cat-cartoon-sitting_194935-99.jpg?w=2000"
         width="300"
         height="200"
-        display: none/>
-    
+        />
+    <style>
+        .body {background-color: rgb(54, 54, 167)}
+        
+        #questionmark {
+            display: hidden
+        }
+
+        #dogimg {
+            display: hidden
+        }
+
+        #catimg {
+            display: hidden
+        }
+
+    </style>
     <script>
             function validation() {let username=document.getElementById("nameId").value;
                         if (username== null || username== "Ally")
@@ -60,9 +75,9 @@
 
             function checkbutton() {
                 if (document.getelementsById('dog').checked) 
-                {document.getElementById("dogpic").style.visibility = "";}
+                {document.getElementById('dog').style.cssText; visibility: visible}
                 else if(document.getelementsById('cat').checked) 
-                {}
+                {document.getElementById('cat').style.cssText; visibility: visible}
             }
     </script>
     </body>
