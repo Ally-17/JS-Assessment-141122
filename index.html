@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <style>
+            .body {background-color: rgb(54, 54, 167)}
+            
+            #questionmark {
+                display: hidden
+            }
+    
+            #dogimg {
+                display: hidden
+            }
+    
+            #catimg {
+                display: hidden
+            }
+    
+        </style>
+        
     </head> 
     <body>
         <h1> This is the Form that will determine my success in the Program moving forward... </h1>
@@ -19,7 +35,7 @@
         <img id= "questionmark" src="https://img.freepik.com/premium-vector/funny-yellow-question-mark-cartoon-charactersvector-collection-set_20412-629.jpg?w=2000"
         width="300"
         height="200"
-        display: none/>
+        />
 
         <img id= "dogimg" src="https://img.freepik.com/premium-vector/cute-dog-cartoon-dog-clipart-vector-illustration_160901-2890.jpg?w=2000"
         width="300"
@@ -30,22 +46,8 @@
         width="300"
         height="200"
         />
-    <style>
-        .body {background-color: rgb(54, 54, 167)}
-        
-        #questionmark {
-            display: hidden
-        }
 
-        #dogimg {
-            display: hidden
-        }
-
-        #catimg {
-            display: hidden
-        }
-
-    </style>
+    
     <script>
             function validation() {let username=document.getElementById("nameId").value;
                         if (username== null || username== "Ally")
