@@ -4,9 +4,14 @@
     </head> 
     <body>
         <h1> This is the Form that will determine my success in the Program moving forward... </h1>
-        <form name="js.ass1411" onsubmit="return validation()" method="post" action="index2.html">
+        <form name="jsAssessment" onsubmit="return validation()" method="post" action="index2.html">
         Enter Your Name: <input type="text" name="myName" id="nameId"/>
-                        <a href="index2.html"><input type="submit" value="Click Here"/></a>
+        Enter Your Mobile Number: <input type="number" name="mobile" id="mobileNo"/><br>
+        Password: <input type="password" name="password1"><br>
+        Check Password: <input type="password" name="password2"><br>
+                    <input type="submit" value="Confirm Password" onclick="confirmPassword()"/>
+        Which do you prefer: <input type="radio" name="Dog" id="dog" value="dog" onclick="checkbutton()">Dogs<input/>
+                <input type="radio" name="cat" id="cat" value="cat" onclick="checkbutton()">Cats<input/>  
     </form>
 
     <script>
@@ -15,7 +20,23 @@
                     {alert("Name entered incorrectly");
                 return false;}
             }
-
+            function confirmPassword()
+            {
+                let password1=document.jsAssessment.password1.value;
+                let password2=document.jsAssessment.password2.value;
+                if (password1.length<6)
+                {alert("ensure password is minimum of 6 characters")
+            return false;}
+            if (password1==password2)
+                {return true;}
+                else{
+                    alert("Passwords dont Match")
+                    return false;}
+                }
+            function checkbutton() {
+                if (document.getelementsById('dog').checked) {}
+                else if(document.getelementsById('cat').checked) {}
+            }
     </script>
     </body>
 </html>
