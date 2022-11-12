@@ -4,12 +4,12 @@
     </head> 
     <body>
         <h1> This is the Form that will determine my success in the Program moving forward... </h1>
-        <form name="jsAssessment">
+        <form name="jsAssessment" onsubmit="return confirmPassword()+ confirmMobile()">
         Enter Your Name: <input type="text" name="myName" id="nameId"/><br><br>
         Enter Your Mobile Number: <input type="number" name="mobile" id="mobileNo"/><br><br>
         Password: <input type="password" name="password1"><br><br>
         Check Password: <input type="password" name="password2"><br><br>
-                    <input type="submit" value="Confirm Password" onclick="confirmPassword()+confirmMobile()"/><br><br><br>
+                    <input type="submit" value="Confirm Password"/><br><br><br>
         Which do you prefer: 
                 <input type="radio" name="Dog" id="dog" value="dog" onclick="checkbutton()"/>Dogs</input>
                 <input type="radio" name="cat" id="cat" value="cat" onclick="checkbutton()"/>Cats</input>  
