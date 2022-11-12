@@ -18,15 +18,18 @@
         <br>
         <img src="https://img.freepik.com/premium-vector/funny-yellow-question-mark-cartoon-charactersvector-collection-set_20412-629.jpg?w=2000"
         width="300"
-        height="200"/>
+        height="200"
+        display= none/>
 
-        <img src="https://www.jamiesale-cartoonist.com/free-cartoon-dog-vector-clip-art/"
+        <img src="https://img.freepik.com/premium-vector/cute-dog-cartoon-dog-clipart-vector-illustration_160901-2890.jpg?w=2000"
         width="300"
-        height="200"/>
+        height="200"
+        display= none/>
     
         <img src="https://img.freepik.com/premium-vector/cute-cat-cartoon-sitting_194935-99.jpg?w=2000"
         width="300"
-        height="200"/>
+        height="200"
+        display= none/>
     
     <script>
             function validation() {let username=document.getElementById("nameId").value;
@@ -57,9 +60,9 @@
 
             function checkbutton() {
                 if (document.getelementsById('dog').checked) 
-                {image.src="https://www.jamiesale-cartoonist.com/free-cartoon-dog-vector-clip-art/"}
+                {document.getElementById("dogpic").style.visibility = "";}
                 else if(document.getelementsById('cat').checked) 
-                {image.src="https://img.freepik.com/premium-vector/cute-cat-cartoon-sitting_194935-99.jpg?w=2000"}
+                {}
             }
     </script>
     </body>
