@@ -4,12 +4,12 @@
     </head> 
     <body>
         <h1> This is the Form that will determine my success in the Program moving forward... </h1>
-        <form name="jsAssessment" onsubmit="return confirmPassword()" method="post" action="index2.html">
+        <form name="jsAssessment" onsubmit="return confirmPassword()" method="post" action=>
         Enter Your Name: <input type="text" name="myName" id="nameId"/><br><br>
         Enter Your Mobile Number: <input type="number" name="mobile" id="mobileNo"/><br><br>
         Password: <input type="password" name="password1"><br><br>
         Check Password: <input type="password" name="password2"><br><br>
-                    <input type="submit" value="Confirm Password" onclick="confirmPassword()"/><br><br><br>
+                    <input type="submit" value="Confirm Password" onclick="confirmPassword()+confirmMobile()"/><br><br><br>
         Which do you prefer: 
                 <input type="radio" name="Dog" id="dog" value="dog" onclick="checkbutton()"/>Dogs</input>
                 <input type="radio" name="cat" id="cat" value="cat" onclick="checkbutton()"/>Cats</input>  
@@ -34,9 +34,19 @@
                     alert("Passwords dont Match")
                     return false;}
                 }
+            
+            function confirmMobile()
+            {
+                if (mobileNo.length<10)
+                {alert("Enter Valid Mobile Number")
+            return false;}
+                }
+
             function checkbutton() {
-                if (document.getelementsById('dog').checked) {}
-                else if(document.getelementsById('cat').checked) {}
+                if (document.getelementsById('dog').checked) 
+                {image.src="https://www.jamiesale-cartoonist.com/free-cartoon-dog-vector-clip-art/"}
+                else if(document.getelementsById('cat').checked) 
+                {image.src="https://img.freepik.com/premium-vector/cute-cat-cartoon-sitting_194935-99.jpg?w=2000"}
             }
     </script>
     </body>
