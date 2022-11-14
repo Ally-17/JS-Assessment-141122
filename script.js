@@ -18,6 +18,15 @@
                 return true;
                 }
 
+            function validemail() {
+                let myemail=document.jsAssessment.email.value;
+                let atsymb=email.indexOf("@");
+                let atDot=email.indexOf(".");
+                if (atsymb<1 || atDot<atsymb+2 || atDot>myemail.length)
+                {alert("Enter Correct Email");
+                return false;}
+            }
+            
             function confirmPassword()
             {
                 let password1=document.jsAssessment.password1.value;

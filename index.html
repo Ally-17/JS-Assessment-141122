@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link type = "text/css" rel="stylesheet" href="/style.css">
         
-        <script src="script.js">
-        </script>
+        <link type="text/css" rel="stylesheet" href="/style.css">
+    
+        <script type="text/javascript" src="/script.js"></script>
+        
     </head> 
     <body>
+        
     <form>
         <center>
         <!create a form if possible use CSS to format and assign a background image>
@@ -67,7 +69,7 @@
         Mobile: 
             <input type="number" name="mobile" id="mobileNo" oninput="return confirmMobile()" aria-required="true"/><br>
         Email: 
-            <input type="text" name="PayName" id="Payname" aria-required="true"/><br>
+            <input type="text" name="email" id="email" oninput="return validemail()" aria-required="true"/><br>
         Password: <input type="password" name="password1">
         &nbsp;
         Confirm Password: <input type="password" name="password2" oninput="return confirmPassword()"/><br>
