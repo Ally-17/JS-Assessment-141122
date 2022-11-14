@@ -1,95 +1,88 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="/style.css" rel="stylesheet">
         <style>
-            .body {
-                font-family : Arial, Helvetica, sans-serif;
-                background : lightslategray;
-                font-size : medium;
-                color : black;
-                }
-            
-                .body.h1 {
-                    color:antiquewhite;
-                }
-
-            .questionmark {
-                display: hidden;
-            }
-    
-            .dogimg {
-                display: hidden;
-            }
-    
-            .catimg {
-                display: hidden;
-            }
-    
+            body {
+                background-color: grey;}
         </style>
-
+        <script src="script.js">
+        </script>
     </head> 
     <body>
-        <h1> This is the Form that will determine my success in the Program moving forward... </h1>
-        <form name="jsAssessment" onsubmit="return confirmPassword()">
-        Enter Your Name: <input type="text" name="myName" id="nameId"/><br><br>
-        Enter Your Mobile Number: <input type="number" name="mobile" id="mobileNo"/><br><br>
-        Password: <input type="password" name="password1"><br><br>
-        Check Password: <input type="password" name="password2"><br><br>
-                    <input type="submit" value="Confirm Password"/><br><br><br>
-        Which do you prefer: 
-                <input type="radio" name="one" id="dog" value="dog" onclick="checkbutton()"/>Dogs</input>
-                <input type="radio" name="one" id="cat" value="cat" onclick="checkbutton()"/>Cats</input>  
-    </form>
-        <br>
-        <img class= "questionmark" src="https://img.freepik.com/premium-vector/funny-yellow-question-mark-cartoon-charactersvector-collection-set_20412-629.jpg?w=2000"
-        width="300"
-        height="200"
-        />
+    <form>
+        <center>
+        <!create a form if possible use CSS to format and assign a background image>
+        <h1> Booking details </h1>
+        <form name="jsAssessment" onsubmit="jsPt2.html">
+        
+        <!create radio buttons for one way and round trip>
+        <input type="radio" name="one" id="OneWay" value="oneway" onclick="OneWay()"/>One way</input>
+        <input type="radio" name="one" id="Return" value="return"/>Return</input><br><br>
 
-        <img class= "dogimg" src="https://img.freepik.com/premium-vector/cute-dog-cartoon-dog-clipart-vector-illustration_160901-2890.jpg?w=2000"
-        width="300"
-        height="200"
-        />
+        <!Create 2 text fields for destinations>
+        To: <input type="text" name="to" id="to" required minlength="1" aria-required="true"/> 
+        &nbsp;
+        From: <input type="text" name="from" id="from" required minlength="1"aria-required="true"/><br>
+
+        <!Create 2 date fields for from and to
+        if possible write validation that from can not be earlier than TODAY 
+        and to can not be earlier than from>
+        Depart: <input type="date" name="depart" id="depart" onclick="TDate()" aria-required="true"/> 
+        &nbsp; 
+        Return: <input type="date" name="return" id="return"/><br>
+
+        <h3>Number of Passangers</h3>
+        <!Create 2 number fields for Adults and Children qty'script>
+        Adults: <input type="number" name="qtyA" aria-required="true"/> 
+        &nbsp;
+        Children: <input type="number" name="qtyC"/><br><br>
+
+        <!passanger details for 2 passangers 
+        each passanger to contain a text field for the name, radio buttons for gender number field for age
+        name field to have vailation of a minimum of 5 characters>
+        <h3>Passanger Details</h3>
+        <div class="passanger1" style="text-align: center; float: left; margin-left: 25%;";>
+            Name: <input type="text" name="Name1" id="Name1" pattern="[a-zA-Z]{5,}" aria-required="true"/> <br>
+            Gender: <input type="radio" name="one" id="Male1" value="Male"/>Male</input>
+                <input type="radio" name="one" id="Female1" value="Female"/>Female</input><br>
+            Age: <input type="number" name="age1" id="age1" aria-required="true"/><br>
+        </div> 
+
+        <div class="passanger2" style="text-align: center; float: right; margin-right: 25%";>
+            Name: <input type="text" name="Name2" id="Name2" pattern="[a-zA-Z]{5,}" aria-required="true"/><br>
+            Gender: <input type="radio" name="one" id="Male2" value="Male"/>Male</input>
+                    <input type="radio" name="one" id="Female2" value="Female"/>Female</input><br>
+            Age: <input type="number" name="age2" id="age2" aria-required="true"/><br>
+        </div>
+
+        <div>
+        <br><br><br><br>
+        <h3>Payment Details:</h3>
+        <!Create a text field for name that autopopulates with the name of passanger 1
+        email with validation to accept email format only 
+        mobile number is a number field with vaidation to accept no less than 10 digits>
+        
+        Name: 
+            <input type="text" name="PayName" id="Payname"/><br>
+        Mobile: 
+            <input type="number" name="mobile" id="mobileNo" onclick="return confirmMobile()" aria-required="true"/><br>
+        Email: 
+            <input type="text" name="PayName" id="Payname" aria-required="true"/><br>
+        Password: <input type="password" name="password1">
+        &nbsp;
+        Check Password: <input type="password" name="password2"><br>
+                        <input type="submit" value="Check Password" onclick="return confirmPassword()"/><br><br><br>
+        </div>
+        <input type="submit" value="Submit" onclick="return submit()"/><br><br><br>
+    </center>
+</form>
+</body>
+<footer>
+        <!if I get time add icons for the airline with social media symbols>
+</footer>
+
+     
     
-        <img class= "catimg" src="https://img.freepik.com/premium-vector/cute-cat-cartoon-sitting_194935-99.jpg?w=2000"
-        width="300"
-        height="200"
-        />
-
     
-    <script>
-            function validation() {let username=document.getElementById("nameId").value;
-                        if (username== null || username== "Ally")
-                    {alert("Name entered incorrectly");
-                return false;}
-            }
-            function confirmPassword()
-            {
-                let password1=document.jsAssessment.password1.value;
-                let password2=document.jsAssessment.password2.value;
-                if (password1.length<6)
-                {alert("ensure password is minimum of 6 characters")
-            return false;}
-            if (password1==password2)
-                {return true;}
-                else{
-                    alert("Passwords dont Match")
-                    return false;}
-                }
-            
-            function confirmMobile()
-            {
-                if (mobileNo.length<10)
-                {alert("Enter Valid Mobile Number")
-            return false;}
-                }
-
-            function checkbutton() {
-                if (document.getelementsById('dog').checked) 
-                {document.getElementById('dog').style.cssText; visibility: visible}
-                else if(document.getelementsById('cat').checked) 
-                {document.getElementById('cat').style.cssText; visibility: visible}
-            }
-    </script>
-    </body>
 </html>

@@ -1,0 +1,22 @@
+.body {
+    font-family : Arial, Helvetica, sans-serif;
+    background : lightslategray;
+    font-size : medium;
+    color : black;
+    }
+
+    .body.h1 {
+        color:antiquewhite;
+    }
+
+.questionmark {
+    visibility: visible;
+}
+
+.dogimg {
+    visibility: hidden;
+}
+
+.catimg {
+    visibility: hidden;
+}
