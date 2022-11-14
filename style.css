@@ -5,18 +5,6 @@
     color : black;
     }
 
-    .body.h1 {
-        color:antiquewhite;
-    }
-
-.questionmark {
-    visibility: visible;
-}
-
-.dogimg {
-    visibility: hidden;
-}
-
-.catimg {
-    visibility: hidden;
+.socials.h4 {
+    text-align: right;
 }

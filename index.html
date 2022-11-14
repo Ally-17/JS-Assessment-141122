@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="/style.css" rel="stylesheet">
-        <style>
-            body {
-                background-color: grey;}
+        <style link href="/style.css" rel="stylesheet">
         </style>
         <script src="script.js">
         </script>
@@ -14,7 +11,7 @@
         <center>
         <!create a form if possible use CSS to format and assign a background image>
         <h1> Booking details </h1>
-        <form name="jsAssessment" onsubmit="jsPt2.html">
+        <form name="jsAssessment" onsubmit=return window{alert("Thank you for your submission")}/>
         
         <!create radio buttons for one way and round trip>
         <input type="radio" name="one" id="OneWay" value="oneway" onclick="OneWay()"/>One way</input>
@@ -66,27 +63,28 @@
         Name: 
             <input type="text" name="PayName" id="Payname"/><br>
         Mobile: 
-            <input type="number" name="mobile" id="mobileNo" onclick="return confirmMobile()" aria-required="true"/><br>
+            <input type="number" name="mobile" id="mobileNo" onchange="return confirmMobile()" aria-required="true"/><br>
         Email: 
             <input type="text" name="PayName" id="Payname" aria-required="true"/><br>
         Password: <input type="password" name="password1">
         &nbsp;
-        Check Password: <input type="password" name="password2"><br>
-                        <input type="submit" value="Check Password" onclick="return confirmPassword()"/><br><br><br>
+        Confirm Password: <input type="password" name="password2" onchange="return confirmPassword()/><br>
+                        <input type="submit" value="Submit"/><br><br>
         </div>
-        <input type="submit" value="Submit" onclick="return submit()"/><br><br><br>
+      
     </center>
 </form>
 </body>
 <footer>
         <!if I get time add icons for the airline with social media symbols>
-        <img src="/images/FB.png"/>
+    <div class="socials" style="align-items:right; margin-right: 10%";></div>
+        <img src="/images/FB.png" height="70" width="70"/>
         &nbsp;
-        <img src="/images/twitter.png"/>
+        <img src="/images/twitter.png" height="70" width="70"/>
         &nbsp;
-        <img src="/images/download.png"/>
-        &nbsp;
-        <h4>Thanks for flying with Ally Airways.... if this form is anything to go by....... GOOD LUCK!</h4>
-
+        <img src="/images/download.png" height="70" width="70"/>
+    
+        <h4>Thanks for flying with Ally Airways.... if this form is anything to go by....... <strong>GOOD LUCK!</strong></h4>
+    </div>
 </footer>  
 </html>
