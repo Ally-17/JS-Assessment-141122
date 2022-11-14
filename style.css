@@ -1,9 +1,8 @@
 .body {
-    font-family : Arial, Helvetica, sans-serif;
-    background : lightslategray;
-    font-size : medium;
-    color : black;
+    background-image: url("/images/Clouds.jpg.jpg");
+    color: black;
     }
+
 
 .socials.h4 {
     text-align: right;

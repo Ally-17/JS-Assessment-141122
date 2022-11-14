@@ -34,7 +34,7 @@
             
             function confirmMobile()
             {
-                if (mobileNo.length<10)
+                if (mobileNo.length < "10")
                 {alert("Enter Valid Mobile Number")
             return false;}
                 }
@@ -42,7 +42,7 @@
             function submit() {
                 window.alert("You have Successfully Submitted your Form");
             }
-            
+
             let PayName= document.jsAssessment.Name1.value;
             return getElementById("PayName")= PayName
 

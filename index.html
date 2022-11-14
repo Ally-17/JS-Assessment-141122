@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style link href="/style.css" rel="stylesheet">
-        </style>
+        <link type = "text/css" rel="stylesheet" href="/style.css">
+        
         <script src="script.js">
         </script>
     </head> 
@@ -40,14 +40,16 @@
         name field to have vailation of a minimum of 5 characters>
         <h3>Passanger Details</h3>
         <div class="passanger1" style="text-align: center; float: left; margin-left: 25%;";>
-            Name: <input type="text" name="Name1" id="Name1" pattern="[a-zA-Z]{5,}" aria-required="true"/> <br>
+            Name: <input type="text" name="Name1" id="Name1" pattern="[a-zA-Z]{5,}" aria-required="true" 
+            title="Name requires a minimum of 5 characters"/> <br>
             Gender: <input type="radio" name="one" id="Male1" value="Male"/>Male</input>
                 <input type="radio" name="one" id="Female1" value="Female"/>Female</input><br>
             Age: <input type="number" name="age1" id="age1" aria-required="true"/><br>
         </div> 
 
         <div class="passanger2" style="text-align: center; float: right; margin-right: 25%";>
-            Name: <input type="text" name="Name2" id="Name2" pattern="[a-zA-Z]{5,}" aria-required="true"/><br>
+            Name: <input type="text" name="Name2" id="Name2" pattern="[a-zA-Z]{5,}" aria-required="true"
+            title="Name requires a minimum of 5 characters"/><br>
             Gender: <input type="radio" name="one" id="Male2" value="Male"/>Male</input>
                     <input type="radio" name="one" id="Female2" value="Female"/>Female</input><br>
             Age: <input type="number" name="age2" id="age2" aria-required="true"/><br>
@@ -63,12 +65,12 @@
         Name: 
             <input type="text" name="PayName" id="Payname"/><br>
         Mobile: 
-            <input type="number" name="mobile" id="mobileNo" onchange="return confirmMobile()" aria-required="true"/><br>
+            <input type="number" name="mobile" id="mobileNo" oninput="return confirmMobile()" aria-required="true"/><br>
         Email: 
             <input type="text" name="PayName" id="Payname" aria-required="true"/><br>
         Password: <input type="password" name="password1">
         &nbsp;
-        Confirm Password: <input type="password" name="password2" onchange="return confirmPassword()/><br>
+        Confirm Password: <input type="password" name="password2" oninput="return confirmPassword()"/><br>
                         <input type="submit" value="Submit"/><br><br>
         </div>
       
